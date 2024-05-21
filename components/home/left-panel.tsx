@@ -2,9 +2,10 @@ import { ListFilter, LogOut, MessageSquareDiff, Search, User } from "lucide-reac
 import { Input } from "../ui/input";
 import ThemeSwitch from "./theme-switch";
 import Conversation from "./conversation";
+import { conversations } from "@/dummy-data/db";
 
 const LeftPanel = () => {
-	const conversations: any[] = [];
+	//const conversations = [];
 
 	return (
 		<div className='w-1/4 border-gray-600 border-r'>
@@ -41,7 +42,7 @@ const LeftPanel = () => {
 				{/* Conversations will go here*/}
 
 				{conversations.map((conversation) => (
-					<Conversation key={conversation._id} conversation={conversation} />
+					<Conversation key ={conversation._id} conversation={conversation}/>
 				))}
 
 				{conversations?.length === 0 && (
